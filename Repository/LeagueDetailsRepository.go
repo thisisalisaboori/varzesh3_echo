@@ -17,7 +17,7 @@ func GetLeagueResult(id int) []Domin.LeagueDetail {
 	result := make([]Domin.LeagueDetail, 0)
 	obj := Domin.LeagueDetail{}
 	for rows.Next() {
-		er = rows.Scan(&obj.Id, &obj.Av, &obj.Draw, &obj.Loss, &obj.LeagueId,
+		er = rows.Scan(&obj.Id, &obj.Av, &obj.Draw, &obj.LeagueId, &obj.Loss,
 			&obj.Play, &obj.Point, &obj.Rank, &obj.Team, &obj.Win)
 		if er != nil {
 			return nil
